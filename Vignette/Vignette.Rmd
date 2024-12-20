@@ -37,7 +37,7 @@ The `plotStyle` package offers a set of functions that provide publication-ready
 
 **Key Functions:**
 
-1. custom_scatter(): Custom Scatter Plot Function
+**1. custom_scatter()**: Custom Scatter Plot Function
 This function creates a scatter plot with consistent, publication-ready styling. Users can specify the x and y variables, choose the color of the points, and select from pre-defined themes such as "default" or "minimal". The function also allows for a custom plot title, ensuring a tailored appearance.
 
             Parameters:
@@ -45,16 +45,16 @@ This function creates a scatter plot with consistent, publication-ready styling.
             y: A string specifying the column name for the y-axis.
             data: A data frame containing the variables for the plot.
             color: A string specifying the color of the points. Default is "purple".
-            theme: A string specifying the theme to apply. Options are "default" (white background) or "minimal" (minimal grid lines).
+            theme: A string specifying the theme to apply. Options are "default"                                                        (white background) or "minimal" (minimal grid lines).
             Default is "default".
             title: A string specifying the plot title. Default is "Custom Scatter Plot".
 
 
 
-2. theme_academic(): Academic Theme for Plots
+**2. theme_academic()**: Academic Theme for Plots
 This function returns a clean, minimal theme designed for academic publications. It removes background elements and uses light grid lines to create a polished, publication-friendly aesthetic.
 
-3. palette_vibrant(): Vibrant Color Palette
+**3. palette_vibrant()**: Vibrant Color Palette
 The palette_vibrant() function provides a custom, vibrant color palette that is ideal for categorical variables in `ggplot2` plots. This palette can be applied using scale_color_manual() for categorical data or scale_color_gradient() for continuous data to add visually striking colors to plots.
 
 
@@ -167,7 +167,7 @@ The Shiny app will allow you to select the x-axis and y-axis variables, choose a
 
 # Future Work
 
-While `plotStyle` already offers several useful features, numerous ways for me to enhance the package in the future:
+While `plotStyle` already offers several useful features, I plan to enhance the package in the future:
 
 1.  **Adding more themes**: I plan to introduce additional themes, including those tailored for posters, websites, and           presentations. Any new themes will be added at the end of each update period (monthly).
 
