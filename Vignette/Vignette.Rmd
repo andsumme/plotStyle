@@ -3,7 +3,7 @@ title: "PBHL-B581 Final - Introduction to plotStyle"
 output: rmarkdown::html_vignette
 vignette: >
   \usepackage{graphicx}
-  %\VignetteIndexEntry{VizStyleR: Consistent and Publication-Ready Graphs}
+  %\VignetteIndexEntry{plotStyle: Consistent and Publication-Ready Graphs}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options:
   markdown: 
