@@ -159,6 +159,7 @@ ggplot(mtcars, aes(mpg, wt)) +
     theme_academic() + 
     labs(title = "Combined Functions")
 ```
+
 Here, all three functions are combined again. Showing how easily you can mix custom scatter plots, vibrant colors, and academic themes for improved functionality and appearance.
 \vspace
 
