@@ -154,13 +154,19 @@ This code uses custom_scatter() to plot the data with an orange color, applies t
 
 ```{r}
 ggplot(mtcars, aes(mpg, wt)) + 
-    geom_point(aes(color = mpg)) + 
-    scale_color_gradientn(colors = palette_vibrant()) + 
-    theme_academic() + 
-    labs(title = "Combined Functions")
+    geom_point(aes(color = mpg)) + #Adds scatter points with a gradient color based on the mpg variable.
+    scale_color_gradientn(colors = palette_vibrant()) + #Uses the vibrant color palette to create a visually dynamic gradient.
+    theme_academic() + #Applies the academic theme for a clean and publication-ready appearance.
+    labs(
+        title = "Combined Functions Plot",
+        x = "Miles Per Gallon (mpg)",
+        y = "Weight (1000 lbs)",
+        color = "MPG Gradient"
+    ) #Customizes the title, axis labels, and color legend for better clarity.
 ```
 
 Here, all three functions are combined again. Showing how easily you can mix custom scatter plots, vibrant colors, and academic themes for improved functionality and appearance.
+This code will generate a scatter plot where: The x-axis represents "Miles Per Gallon (mpg).", The y-axis shows "Weight (1000 lbs).", The color gradient corresponds to mpg values, using the vibrant palette., The academic theme enhances readability with a minimalistic design.
 \vspace
 
 # Shiny Gadget for Interactive Plot Customization
@@ -176,6 +182,7 @@ The Shiny app will allow you to select the x-axis and y-axis variables, choose a
 \vspace
 *Note: If you go to the "Help" section in R and search for any of these functions (after downloading and installing), it will offer a brief synopsis of what they do and how to use them.
 \vspace
+
 # Future Work
 
 While `plotStyle` already offers several useful features, I plan to enhance the package in the future:
