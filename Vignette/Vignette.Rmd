@@ -39,6 +39,7 @@ The `plotStyle` package offers a set of functions that provide publication-ready
 **Key Functions:**
 
 **1. custom_scatter()**: Custom Scatter Plot Function
+
 This function creates a scatter plot with consistent, publication-ready styling. Users can specify the x and y variables, choose the color of the points, and select from pre-defined themes such as "default" or "minimal". The function also allows for a custom plot title, ensuring a tailored appearance.
 
             Parameters:
