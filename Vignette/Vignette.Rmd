@@ -171,14 +171,15 @@ This code will generate a scatter plot where: The x-axis represents "Miles Per G
 # Shiny Gadget for Interactive Plot Customization
 
 One of the key features of `plotStyle` is the interactive Shiny gadget, `custom_plot_gadget()`, which allows you to customize plots interactively.
-To launch the gadget, run the following code:
+To launch the gadget, run the following code, and enter in the dataset of your choosing:
 
-```{r}
-if (interactive()) custom_plot_gadget()
+```{r, eval = FALSE}
+if (interactive()) custom_plot_gadget(data = mtcars) #I am using mtcars as the example dataset 
 ```
 
-The Shiny app will allow you to select the x-axis and y-axis variables, choose a color for the points, pick between the "default" or "minimal" themes, and add a custom title.
+Running this Shiny app (with the data set of your choosing) will allow you to select the x-axis and y-axis variables, choose a color for the points, pick between the "default" or "minimal" themes, and add a custom title.
 \vspace
+
 *Note: If you go to the "Help" section in R and search for any of these functions (after downloading and installing), it will offer a brief synopsis of what they do and how to use them.
 \vspace
 
