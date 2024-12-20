@@ -2,11 +2,12 @@
 #'
 #' Launches a Shiny gadget to customize plots interactively, including the ability to set a custom title.
 #'
+#' @param data A data frame to use for the plot. Defaults to `mtcars`.
 #' @return None. Opens a Shiny app.
 #' @examples
-#' if (interactive()) custom_plot_gadget()
+#' if (interactive()) custom_plot_gadget(data = iris)
 #' @export
-custom_plot_gadget <- function() {
+custom_plot_gadget <- function(data = mtcars) {
   library(shiny)
   library(shinyWidgets)
   library(ggplot2)
@@ -16,8 +17,8 @@ custom_plot_gadget <- function() {
     titlePanel("Custom Plot Gadget"),
     sidebarLayout(
       sidebarPanel(
-        selectInput("xcol", "X-axis Variable:", names(mtcars)),
-        selectInput("ycol", "Y-axis Variable:", names(mtcars)),
+        selectInput("xcol", "X-axis Variable:", names(data)),
+        selectInput("ycol", "Y-axis Variable:", names(data)),
         textInput("plotTitle", "Plot Title:", value = "Custom Scatter Plot"),
         colourpicker::colourInput("color", "Point Color:", value = "blue"),
         selectInput("theme", "Theme:", choices = c("default", "minimal"))
@@ -30,7 +31,7 @@ custom_plot_gadget <- function() {
 
   server <- function(input, output) {
     output$customPlot <- renderPlot({
-      ggplot(mtcars, aes_string(x = input$xcol, y = input$ycol)) +
+      ggplot(data, aes_string(x = input$xcol, y = input$ycol)) +
         geom_point(color = input$color) +
         labs(title = input$plotTitle, x = input$xcol, y = input$ycol) +
         {

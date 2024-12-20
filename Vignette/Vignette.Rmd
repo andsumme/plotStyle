@@ -92,7 +92,7 @@ This will create a scatter plot with the mpg variable on the x-axis and wt on th
 
 ```{r}
 # Advanced Example: Combining customizations
-custom_scatter("mpg", "wt", mtcars, color = "red", title = "Custom Plot", theme = "minimal")
+custom_scatter("mpg", "wt", mtcars, color = "red", title = "Advanced Example", theme = "minimal")
 ```
 
 This example customizes the color of the points to red, applies the minimal theme (with lighter grid lines), and sets the title to "Custom Plot". This plot is more visually clean and would be suitable for a paper or presentation.
@@ -104,11 +104,10 @@ This example customizes the color of the points to red, applies the minimal them
 The `theme_academic()` function provides a clean, academic-style theme that is suitable for publications:
 
 ```{r}
-test_plot <- ggplot(mtcars, aes(mpg, wt)) +
+ggplot(mtcars, aes(mpg, wt)) +
     geom_point() +
     theme_academic() +
-    labs(title = "Academic Theme Test", x = "Miles Per Gallon", y = "Weight")
-print(test_plot)
+    labs(title = "Academic Theme", x = "Miles Per Gallon", y = "Weight")
 ```
 
 In this plot, you can see that the background is blank, the grid lines are light gray, and the axis titles are bold—ideal for academic contexts.
@@ -124,7 +123,7 @@ You can use it to customize the color scheme of your plots:
 ggplot(mtcars, aes(mpg, wt)) + geom_point(aes(color = mpg)) + scale_color_gradientn(colors = palette_vibrant())
 ```
 
-This example applies the vibrant color gradient based on the mpg variable. It adds a dynamic, visually appealing range of colors to the scatter plot.
+This example applies the vibrant color gradient based on the mpg variable (continuous). It adds a dynamic, visually appealing range of colors to the scatter plot.
 \vspace
 
 ```{r}
@@ -133,7 +132,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   scale_color_manual(values = palette_vibrant())
 ```
 
-In this case, the color of the points depends on the cyl variable, and the palette_vibrant() colors are applied to give the plot an eyecatcing appearance.
+In this case, the color of the points depends on the cyl variable (catergorical), and the palette_vibrant() colors are applied to give the plot an eyecatcing appearance.
 
 
 \vspace
