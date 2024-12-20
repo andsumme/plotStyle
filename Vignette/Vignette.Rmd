@@ -46,7 +46,8 @@ This function creates a scatter plot with consistent, publication-ready styling.
             y: A string specifying the column name for the y-axis.
             data: A data frame containing the variables for the plot.
             color: A string specifying the color of the points. Default is "purple".
-            theme: A string specifying the theme to apply. Options are "default"                                                                (white background) or "minimal" (minimal grid lines).
+            theme: A string specifying the theme to apply. Options are "default"
+            (white background) or "minimal" (minimal grid lines).
             Default is "default".
             title: A string specifying the plot title. Default is "Custom Scatter Plot".
 
