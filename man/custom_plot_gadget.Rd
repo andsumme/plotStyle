@@ -4,7 +4,10 @@
 \alias{custom_plot_gadget}
 \title{Shiny Gadget for Plot Customization}
 \usage{
-custom_plot_gadget()
+custom_plot_gadget(data = mtcars)
+}
+\arguments{
+\item{data}{A data frame to use for the plot. Defaults to `mtcars`.}
 }
 \value{
 None. Opens a Shiny app.
@@ -13,5 +16,5 @@ None. Opens a Shiny app.
 Launches a Shiny gadget to customize plots interactively, including the ability to set a custom title.
 }
 \examples{
-if (interactive()) custom_plot_gadget()
+if (interactive()) custom_plot_gadget(data = iris)
 }

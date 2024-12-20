@@ -2,12 +2,12 @@
 #'
 #' Launches a Shiny gadget to customize plots interactively, including the ability to set a custom title.
 #'
-#' @param data A data frame to use for the plot. Defaults to `mtcars`.
+#' @param data A data frame or tibble. The dataset to use for plotting.
 #' @return None. Opens a Shiny app.
 #' @examples
-#' if (interactive()) custom_plot_gadget(data = iris)
+#' if (interactive()) custom_plot_gadget(data = mtcars)
 #' @export
-custom_plot_gadget <- function(data = mtcars) {
+custom_plot_gadget <- function(data) {
   library(shiny)
   library(shinyWidgets)
   library(ggplot2)
