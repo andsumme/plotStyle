@@ -42,14 +42,14 @@ The `plotStyle` package offers a set of functions that provide publication-ready
 This function creates a scatter plot with consistent, publication-ready styling. Users can specify the x and y variables, choose the color of the points, and select from pre-defined themes such as "default" or "minimal". The function also allows for a custom plot title, ensuring a tailored appearance.
 
             Parameters:
-            x: A string specifying the column name for the x-axis.
-            y: A string specifying the column name for the y-axis.
-            data: A data frame containing the variables for the plot.
-            color: A string specifying the color of the points. Default is "purple".
-            theme: A string specifying the theme to apply. Options are "default"
+            **x**: A string specifying the column name for the x-axis.
+            **y**: A string specifying the column name for the y-axis.
+            **data**: A data frame containing the variables for the plot.
+            **color**: A string specifying the color of the points. Default is "purple".
+            **theme**: A string specifying the theme to apply. Options are "default"
             (white background) or "minimal" (minimal grid lines).
-            Default is "default".
-            title: A string specifying the plot title. Default is "Custom Scatter Plot".
+            **Default** is "default".
+            **title**: A string specifying the plot title. Default is "Custom Scatter Plot".
 
 
 
