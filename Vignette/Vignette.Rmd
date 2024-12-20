@@ -217,9 +217,10 @@ To install and use `plotStyle`, please follow the steps below:
 There are two ways to install `plotStyle`:
 
 Option 1: Install from GitHub (Recommended). If you have devtools installed, you can install plotStyle directly from GitHub with this command:
-```{r}
-   devtools::install_github("andsumme/plotStyle")
+```{r, eval = FALSE}
+devtools::install_github("andsumme/plotStyle")
 ```
+
 4. **Load the package**
   Once the package is installed, load it into your R session:
 ```{r}
@@ -229,6 +230,7 @@ library(plotStyle)
 **OR**
 
 Option 2: Download ZIP from GitHub, if you'd prefer to manually download the package:
+
 1.  **Download the Repository from GitHub**:
     -   Open RStudio.
     -   Go to <https://github.com/andsumme/plotStyle.git>
