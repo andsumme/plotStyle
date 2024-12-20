@@ -26,12 +26,14 @@ To address this, `plotStyle` incorporates an interactive Shiny gadget, allowing 
 By tackling these challenges, plotStyle aims to streamline the process of generating consistent, professional-quality visualizations in R. Whether you're preparing figures for a research paper, presentation, or report, plotStyle helps you produce aesthetically appealing plots with minimal effort.
 
 
+
 # Package Content
 
 The `plotStyle` package offers a set of functions that provide publication-ready, consistent styling for `ggplot2` plots. It includes customizable themes, color palettes, and specialized plotting functions that streamline the process of generating high-quality visualizations.
 
 **Key Functions:**
-|   1. custom_scatter(): Custom Scatter Plot Function
+
+1. custom_scatter(): Custom Scatter Plot Function
 This function creates a scatter plot with consistent, publication-ready styling. Users can specify the x and y variables, choose the color of the points, and select from pre-defined themes such as "default" or "minimal". The function also allows for a custom plot title, ensuring a tailored appearance.
 
 Parameters:
@@ -43,22 +45,24 @@ color: A string specifying the color of the points. Default is "purple".
 theme: A string specifying the theme to apply. Options are "default" (white background) or "minimal" (minimal grid lines). Default is "default".
 title: A string specifying the plot title. Default is "Custom Scatter Plot".
 
-|   2. theme_academic(): Academic Theme for Plots
+2. theme_academic(): Academic Theme for Plots
 This function returns a clean, minimal theme designed for academic publications. It removes background elements and uses light grid lines to create a polished, publication-friendly aesthetic.
 
-|   3. palette_vibrant(): Vibrant Color Palette
+3. palette_vibrant(): Vibrant Color Palette
 The palette_vibrant() function provides a custom, vibrant color palette that is ideal for categorical variables in ggplot2 plots. This palette can be applied using scale_color_manual() for categorical data or scale_color_gradient() for continuous data to add visually striking colors to plots.
 
 
 **Additional Features**
-|   1. Customizable Plot Elements
+
+1. Customizable Plot Elements
 All functions within the plotStyle package are designed for easy customization. The custom_scatter() function, for example, allows users to adjust the plot title, point color, and theme without needing to manually adjust the plot's components. This feature simplifies the creation of high-quality, consistent plots.
 
-|   2. Publication-Ready Styling
+2. Publication-Ready Styling
 Each function is tailored to generate publication-quality plots, with themes and color palettes that are optimized for clarity, consistency, and professional appearance. The package removes the need for manual styling adjustments, enabling users to focus on data visualization rather than aesthetic details.
 
-|   3. Flexibility
+3. Flexibility
 Users can easily extend the package by adding their own themes, color palettes, or plot functions. The package is designed to be modular, so it can easily integrate with other R packages and workflows.
+
 
 
 
@@ -156,8 +160,11 @@ The Shiny app will allow you to select the x-axis and y-axis variables, choose a
 # Future Work
 
 While `plotStyle` already offers several useful features, numerous ways for me to enhance the package in the future:
+
 1.  **Adding more themes**: I plan to introduce additional themes, including those tailored for posters, websites, and           presentations. Any new themes will be added at the end of each update period (monthly).
+
 2.  **Improving the Shiny gadget**: Future updates to the Shiny gadget will include the ability to adjust plot size, axis         labels, and text size directly within the interface, expected by August 2025. 
+
 3.  **Exporting high-quality images**: I will implement export options for PNG, SVG, and PDF formats, ensuring that plots        are resized and output at high resolutions. I expect this function to be created by June 2025. 
 
 # Conclusion
