@@ -14,15 +14,15 @@ editor_options:
 
 Effective data visualization is essential for communicating complex insights, particularly in research and professional settings. However, despite the availability of powerful tools like `ggplot2` in R, many users face persistent challenges—such as mismatched color schemes, uneven layouts, or unclear labeling—that hinder the efficiency and consistency of their visualizations. The `plotStyle` package was developed to address three key challenges commonly encountered in data visualization:
 
-1. Inconsistent Styling Across Visualizations
+**1. Inconsistent Styling Across Visualizations**:
 Researchers and practitioners often struggle to maintain a consistent visual style across multiple plots. This inconsistency can detract from the clarity and professional appearance of reports, presentations, or publications. For example, using different color schemes, fonts, or plot elements across figures can confuse the viewer and reduce the overall impact of the message. While `ggplot2` and its coexisting packages have a variety of themes, they often lacks the flexibility needed for modifications to meet branding or publication-specific standards.
 `plotStyle` addresses this challenge by providing predefined themes and color palettes, ensuring a uniform look and feel across all plots generated within a project. Users can choose from a variety of academic, professional, or custom styles that suit their specific needs.
 
-2.	Time-Consuming Customization of ggplot2 Plots
+**2.	Time-Consuming Customization of ggplot2 Plots**:
 While `ggplot2` offers a high degree of customization, manually tweaking every plot to achieve the desired aesthetics can be time-consuming, especially when working with multiple plots. This repetitive process often involves adjusting plot elements such as themes, axis labels, and colors, which can become tedious when applied to several figures.
 With `plotStyle`, users can streamline this process by using wrapper functions that automatically apply common customizations. These functions allow users to easily change plot aesthetics such as themes, axis labels, colors, and more, without needing to write extensive code for each individual plot.
 
-3.	Limited Interactivity for Customization
+**3.	Limited Interactivity for Customization**:
 Customizing plots often requires users to modify the underlying code and trial-and-error until the desired appearance is achieved. This process can be especially daunting for those who are not familiar with the intricacies of `ggplot2` syntax or those who prefer a more hands-on approach.
 
 To address this, `plotStyle` incorporates an interactive Shiny gadget, allowing users to visually adjust plot elements without writing code. The gadget provides a simple, intuitive interface for customizing plot features such as titles, labels, and colors, making it easy to create publication-ready figures quickly.
@@ -55,7 +55,7 @@ This function creates a scatter plot with consistent, publication-ready styling.
 This function returns a clean, minimal theme designed for academic publications. It removes background elements and uses light grid lines to create a polished, publication-friendly aesthetic.
 
 3. palette_vibrant(): Vibrant Color Palette
-The palette_vibrant() function provides a custom, vibrant color palette that is ideal for categorical variables in ggplot2 plots. This palette can be applied using scale_color_manual() for categorical data or scale_color_gradient() for continuous data to add visually striking colors to plots.
+The palette_vibrant() function provides a custom, vibrant color palette that is ideal for categorical variables in `ggplot2` plots. This palette can be applied using scale_color_manual() for categorical data or scale_color_gradient() for continuous data to add visually striking colors to plots.
 
 
 **Additional Features**
@@ -127,7 +127,9 @@ ggplot(mtcars, aes(mpg, wt)) +
 In this case, the color of the points depends on the cyl variable, and the palette_vibrant() colors are applied to give the plot an eyecatcing appearance.
 
 
+
 **Combining Functions**
+
 You can combine these functions to have even more flexibility in creation:
 
 ```{r}
