@@ -76,7 +76,8 @@ Users can easily extend the package by adding their own themes, color palettes, 
 
 # Function Examples
 
-**`custom_scatter()`**
+**custom_scatter**
+
 The `custom_scatter()` function allows you to easily create scatter plots with customized colors and themes.
 Here's an example of how to use it:
 
@@ -87,6 +88,7 @@ custom_scatter("mpg", "wt", mtcars)
 ```
 
 This will create a scatter plot with the mpg variable on the x-axis and wt on the y-axis, using the default color ("purple") and theme ("default").
+\vspace
 
 ```{r}
 # Advanced Example: Combining customizations
@@ -95,8 +97,10 @@ custom_scatter("mpg", "wt", mtcars, color = "red", title = "Custom Plot", theme 
 
 This example customizes the color of the points to red, applies the minimal theme (with lighter grid lines), and sets the title to "Custom Plot". This plot is more visually clean and would be suitable for a paper or presentation.
 
+\vspace
 
-**`theme_academic()`**
+**theme_academic**
+
 The `theme_academic()` function provides a clean, academic-style theme that is suitable for publications:
 
 ```{r}
@@ -109,8 +113,10 @@ print(test_plot)
 
 In this plot, you can see that the background is blank, the grid lines are light gray, and the axis titles are bold—ideal for academic contexts.
 
+\vspace
 
-**`palette_vibrant()`**
+**palette_vibrant**
+
 The `palette_vibrant()` function gives you a set of vibrant colors for your plots.
 You can use it to customize the color scheme of your plots:
 
@@ -119,6 +125,7 @@ ggplot(mtcars, aes(mpg, wt)) + geom_point(aes(color = mpg)) + scale_color_gradie
 ```
 
 This example applies the vibrant color gradient based on the mpg variable. It adds a dynamic, visually appealing range of colors to the scatter plot.
+\vspace
 
 ```{r}
 ggplot(mtcars, aes(mpg, wt)) + 
@@ -129,6 +136,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 In this case, the color of the points depends on the cyl variable, and the palette_vibrant() colors are applied to give the plot an eyecatcing appearance.
 
 
+\vspace
 
 **Combining Functions**
 
@@ -138,10 +146,11 @@ You can combine these functions to have even more flexibility in creation:
 custom_scatter("mpg", "wt", mtcars, color = "orange", theme = "minimal") + 
     scale_color_manual(values = palette_vibrant()) + 
     theme_academic()
-#This coombines custom_scatter(), theme_academic(), and palette_vibrant()
 ```
 
-This code uses custom_scatter() to plot the data with an orange color, applies the minimal theme, and adds the vibrant color palette for additional visual customization.
+This code uses custom_scatter() to plot the data with an orange color, applies the minimal and academic theme, and adds the vibrant color palette for additional visual customization.
+\vspace
+
 
 ```{r}
 ggplot(mtcars, aes(mpg, wt)) + 
@@ -150,9 +159,8 @@ ggplot(mtcars, aes(mpg, wt)) +
     theme_academic() + 
     labs(title = "Combined Functions")
 ```
-
 Here, all three functions are combined again. Showing how easily you can mix custom scatter plots, vibrant colors, and academic themes for improved functionality and appearance.
-
+\vspace
 
 # Shiny Gadget for Interactive Plot Customization
 
@@ -164,9 +172,9 @@ if (interactive()) custom_plot_gadget()
 ```
 
 The Shiny app will allow you to select the x-axis and y-axis variables, choose a color for the points, pick between the "default" or "minimal" themes, and add a custom title.
-
+\vspace
 *Note: If you go to the "Help" section in R and search for any of these functions (after downloading and installing), it will offer a brief synopsis of what they do and how to use them.
-
+\vspace
 # Future Work
 
 While `plotStyle` already offers several useful features, I plan to enhance the package in the future:
@@ -220,9 +228,11 @@ library(plotStyle)
 **OR**
 
 Option 2: Download ZIP from GitHub, if you'd prefer to manually download the package:
-1.  **Download the Repository from GitHub**: - Go to <https://github.com/andsumme/B581_Final_Project>.
-- Click on the **Code** button and select **Download ZIP**.
-- Extract the ZIP file to a directory on your computer.
+1.  **Download the Repository from GitHub**:
+    -   Open RStudio.
+    -   Go to <https://github.com/andsumme/plotStyle.git>
+    -   Click on the **Code** button and select **Download ZIP**.
+    -   Extract the ZIP file to a directory on your computer.
 
 2.  **Open the Project in RStudio**:
     -   Open RStudio.
