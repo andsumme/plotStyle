@@ -18,4 +18,5 @@ Suggests:
   testthat,
   knitr,
   rmarkdown
-
+URL: https://github.com/andsumme/plotStyle
+BugReports: https://github.com/andsumme/plotStyle/issues
