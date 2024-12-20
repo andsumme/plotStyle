@@ -1,0 +1,21 @@
+Package: plotStyle
+Type: Package
+Title: Custom Graphing Functions for Consistent, Publication-Ready Plots
+Version: 0.1.0
+Author: Andrew Summers
+Maintainer: Andrew Summers <andsumme@iu.edu>
+Description: A package to create custom graphing functions with default settings for ggplot2.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports:
+  ggplot2,
+  shiny,
+  shinyWidgets,
+  colourpicker
+Suggests:
+  testthat,
+  knitr,
+  rmarkdown
+

@@ -1,0 +1,157 @@
+---
+title: "PBHL-B581 Final - Introduction to plotStyle"
+output: rmarkdown::html_vignette
+vignette: >
+  \usepackage{graphicx}
+  %\VignetteIndexEntry{VizStyleR: Consistent and Publication-Ready Graphs}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options:
+  markdown: 
+    wrap: sentence
+---
+
+# Motivation and Background
+
+Data visualization is a cornerstone of data analysis and communication, enabling the transformation of complex datasets into comprehensible insights that drive informed decision-making. However, inconsistent visuals—such as mismatched color schemes, uneven layouts, or unclear labeling—can obscure findings, hinder comparisons, and diminish communication effectiveness. These inconsistencies often lead to misinterpretations, delays in decision-making, and challenges in conveying key messages to diverse audiences.
+
+Standardizing and improving visual outputs is essential to ensure clarity, credibility, and impact. In R, achieving this consistency with `ggplot2` often requires repetitive manual adjustments to themes, color schemes, and layouts. While `ggplot2` is highly flexible, its default settings may not align with specific publication or organizational requirements. Existing packages, such as `ggthemes` and `ggpubr`, address some of these challenges but come with limitations:
+1) `ggthemes` offers a variety of themes but often lacks the flexibility needed for modifications to meet branding or publication-specific standards.
+2) `ggpubr` simplifies common tasks in `ggplot2` but provides limited options for fully customizable visual elements.
+3) `ggthemes` and `ggpubr` also lack modularity and a user-friendly interface for non-expert users.
+
+This gap calls for a comprehensive toolkit like `plotStyle`, which combines ease of use with the flexibility required to meet diverse visualization needs.
+
+# Addressing Key Challenges
+
+The `plotStyle` package was developed to streamline the process of generating consistent, publication-ready plots in R using `ggplot2`.
+Creating visually appealing and standardized plots can be a time-consuming process, especially when handling multiple graphs.
+This package aims to address these challenges by providing functions that offer pre-set themes, color palettes, and easy-to-use plot customization.
+Additionally, `plotStyle` includes an interactive Shiny gadget for real-time customization, ensuring users can create the perfect plot with minimal effort.
+
+`plotStyle` focuses on solving the following issues: 
+1) **Inconsistent styling**: Ensures uniformity across multiple plots with pre-defined themes and color palettes.
+2) **Time-consuming customization**: Simplifies the customization of ggplot2 plots by providing wrapper functions for common adjustments.
+3) **Limited interactivity**: The Shiny gadget allows users to adjust plot features interactively without writing extensive code.
+
+By tackling these pain points, `plotStyle` positions itself as a powerful solution for data professionals seeking to improve the efficiency, consistency, and quality of their visualizations.
+
+# Function Examples
+
+The `custom_scatter()` function allows you to easily create scatter plots with customized colors and themes.
+Here's an example of how to use it:
+
+```{r}
+#Default Plot
+library(plotStyle)
+custom_scatter("mpg", "wt", mtcars)
+#Custom Colors, Theme, and Title
+custom_scatter("mpg", "wt", mtcars, color = "red", title = "Custom Plot", theme = "minimal")
+#This will create a scatter plot of mpg vs. wt from the mtcars dataset, with red points, a minimal theme, and custom title.
+```
+
+The `theme_academic()` function provides a clean, academic-style theme that is suitable for publications:
+
+```{r}
+test_plot <- ggplot(mtcars, aes(mpg, wt)) +
+    geom_point() +
+    theme_academic() +
+    labs(title = "Academic Theme Test", x = "Miles Per Gallon", y = "Weight")
+print(test_plot)
+
+#This plot uses a minimal background with light grid lines and bold axis titles, designed to be publication-ready.
+```
+
+The `palette_vibrant()` function gives you a set of vibrant colors for your plots.
+You can use it to customize the color scheme of your plots:
+
+```{r}
+ggplot(mtcars, aes(mpg, wt)) + geom_point(aes(color = mpg)) + scale_color_gradientn(colors = palette_vibrant())
+#This creates a scatter plot of continuous variables, with the mpg variable controlling the point colors, using the vibrant palette.
+```
+```{r}
+ggplot(mtcars, aes(mpg, wt)) + 
+  geom_point(aes(color = factor(cyl))) + 
+  scale_color_manual(values = palette_vibrant())
+#This creates a scatter plot of categorical variables, with the cyl variable controlling the point colors, using the vibrant palette.
+```
+
+You can combine these functions to have even more flexibility in creation:
+
+```{r}
+custom_scatter("mpg", "wt", mtcars, color = "red", theme = "minimal") + 
+    scale_color_manual(values = palette_vibrant()) + 
+    theme_academic()
+#This coombines custom_scatter(), theme_academic(), and palette_vibrant()
+
+ggplot(mtcars, aes(mpg, wt)) + 
+    geom_point(aes(color = mpg)) + 
+    scale_color_gradientn(colors = palette_vibrant()) + 
+    theme_academic() + 
+    labs(title = "Combined Functions")
+#This combines custom_scatter(), theme_academic(), and vibrant color gradient
+```
+
+# Shiny Gadget for Interactive Plot Customization
+
+One of the key features of `plotStyle` is the interactive Shiny gadget, `custom_plot_gadget()`, which allows you to customize plots interactively.
+To launch the gadget, run the following code:
+
+```{r}
+if (interactive()) custom_plot_gadget()
+```
+
+The Shiny app will allow you to select the x-axis and y-axis variables, choose a color for the points, pick between the "default" or "minimal" themes, and add a custom title.
+
+*Note: If you go to the "Help" section in R and search for any of these functions (after downloading and installing, it will offer a brief synopsis of what they do)
+
+# Future Work
+
+While `plotStyle` already offers several useful features, there are numerous ways to enhance the package in the future:
+
+-   **Adding more themes**: Additional predefined themes, such as those tailored for different types of publications (e.g., posters, slides, websites), could be incorporated.
+-   **Improving the Shiny gadget**: Future iterations of the gadget could allow for even more customization options, such as adjusting plot size, axis labels, and text size.
+-   **Exporting high-quality images**: Offering more export formats, such as PNG, SVG, and PDF, with automatic resizing and high-resolution output, would be a valuable addition.
+
+# Conclusion
+
+The `plotStyle` package provides an easy-to-use, consistent approach to generating publication-ready plots in R.
+With its pre-defined themes, color palettes, and interactive customization, it simplifies the plot-making process, making it faster and more consistent.
+This vignette demonstrated the key features of the package, and future improvements will make it even more powerful.
+
+# Installation
+
+To install and use `plotStyle`, you can follow the steps below:
+
+1.**Download the Repository from GitHub**: - Go to <https://github.com/andsumme/B581_Final_Project>.
+- Click on the **Code** button and select **Download ZIP**.
+- Extract the ZIP file to a directory on your computer.
+
+2.  **Open the Project in RStudio**:
+    -   Open RStudio.
+    -   Go to **File** > **Open Project**.
+    -   Navigate to the directory where you extracted the ZIP file.
+    -   Select the `.Rproj` file (if available) or the main directory of your project.
+    - This will open all aspects of the project for you. Check the "Files" tab to make        sure you have what you need opened.
+3.  **Install Required Packages**:
+    -   Install any required packages using the following command:
+    
+        ``` r
+        install.packages(c("devtools", "ggplot2", "shiny", "shinyWidgets", "colourpicker"))
+        ```
+4.  **Load The Packages**:
+    -   Load it using:
+
+        ``` r
+        library(devtools)
+        library(ggplot2)
+        library(shiny)
+        library(shinyWidgets)
+        library(colourpicker)
+        load_all("path/to/your/project")
+        ```
+        **OR**
+        
+        Open directly from "Downloads" folder
+
+
+Now you're ready to use the functions from `plotStyle` to create beautiful, publication-ready plots with `ggplot2`.
