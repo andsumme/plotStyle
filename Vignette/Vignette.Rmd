@@ -27,7 +27,7 @@ Customizing plots often requires users to modify the underlying code and trial-a
 
 To address this, `plotStyle` incorporates an interactive Shiny gadget, allowing users to visually adjust plot elements without writing code. The gadget provides a simple, intuitive interface for customizing plot features such as titles, labels, and colors, making it easy to create publication-ready figures quickly.
 
-By tackling these challenges, plotStyle aims to streamline the process of generating consistent, professional-quality visualizations in R. Whether you're preparing figures for a research paper, presentation, or report, plotStyle helps you produce aesthetically appealing plots with minimal effort.
+By tackling these challenges, `plotStyle` aims to streamline the process of generating consistent, professional-quality visualizations in R. Whether you're preparing figures for a research paper, presentation, or report, plotStyle helps you produce aesthetically appealing plots with minimal effort.
 
 
 
@@ -41,20 +41,14 @@ The `plotStyle` package offers a set of functions that provide publication-ready
 This function creates a scatter plot with consistent, publication-ready styling. Users can specify the x and y variables, choose the color of the points, and select from pre-defined themes such as "default" or "minimal". The function also allows for a custom plot title, ensuring a tailored appearance.
 
             Parameters:
-
             x: A string specifying the column name for the x-axis.
-
             y: A string specifying the column name for the y-axis.
-
             data: A data frame containing the variables for the plot.
-
             color: A string specifying the color of the points. Default is "purple".
-
-            theme: A string specifying the theme to apply. Options are "default" (white background) or "minimal" (minimal               grid lines).
-
+            theme: A string specifying the theme to apply. Options are "default" (white background) or "minimal" (minimal grid lines).
             Default is "default".
-
             title: A string specifying the plot title. Default is "Custom Scatter Plot".
+
 
 
 2. theme_academic(): Academic Theme for Plots
