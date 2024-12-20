@@ -1,5 +1,6 @@
 ---
 title: "PBHL-B581 Final - Introduction to plotStyle"
+author: "Andrew Summers"
 output: rmarkdown::html_vignette
 vignette: >
   \usepackage{graphicx}
